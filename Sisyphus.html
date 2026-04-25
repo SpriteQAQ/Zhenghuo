@@ -286,7 +286,7 @@
         if (isDragging) return; // 如果正在拖动，则停止溜车
 
         // 如果石头到达山顶，触发滚回机制
-        if (sliderValue > 95 && !isDragging) {
+        if (sliderValue > 90 && !isDragging) {
             // 有 90% 的概率滚回去
             const rollbackSuccess = Math.random() < 0.99;
             if (rollbackSuccess) {
@@ -313,7 +313,7 @@
     // 验证逻辑
     function verify() {
         if (rollbackTimer) cancelAnimationFrame(rollbackTimer);
-        if (sliderValue > 99 && !isDragging) {
+        if (sliderValue > 90 && !isDragging) {
             // 石头停在山顶，通过验证
             // 可以添加成功动画或跳转
             window.location.href = "https://www.bilibili.com/video/BV1GJ411x7h7";
